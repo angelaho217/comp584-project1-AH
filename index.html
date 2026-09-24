@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cafe Coffee - Pumpkin Spice Promo</title>
+
+  <style type="text/css">
+    body, table, td, a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    table {
+      border-collapse: collapse !important;
+    }
+
+    img {
+      border: 0;
+      display: block;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    body {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    a {
+      color: #6f4e37;
+    }
+
+    a.button {
+      transition: all 0.2s ease;
+    }
+
+    a.button:hover {
+      background-color: #d2691e !important;
+      border-color: #d2691e !important;
+      box-shadow: 0 4px 10px rgba(80, 45, 20, 0.35) !important;
+      transform: translateY(-3px);
+    }
+
+    a.text-link:hover {
+      color: #d2691e !important;
+    }
+
+    /* Steam animation */
+    @keyframes steamRise {
+      from {
+        transform: translateY(8px) rotate(-2deg);
+        letter-spacing: 0;
+      }
+
+      to {
+        transform: translateY(-6px) rotate(2deg);
+        letter-spacing: 1px;
+      }
+    }
+
+    .animated-steam {
+      animation: steamRise 2.2s ease-in-out infinite alternate;
+    }
+
+    /* Falling leaves animation */
+    .leaf-canvas {
+      position: relative;
+      height: 58px;
+      overflow: hidden;
+      margin-top: 3px;
+    }
+
+    .leaf {
+      position: absolute;
+      top: -14px;
+      width: 16px;
+      height: 10px;
+      border-radius: 16px 2px 16px 2px;
+      background-color: #d2691e;
+      animation: leafFall 4.5s linear infinite;
+    }
+
+    .leaf-one {
+      left: 28%;
+      animation-delay: 0s;
+      background-color: #c45128;
+    }
+
+    .leaf-two {
+      left: 43%;
+      animation-delay: 1.5s;
+      background-color: #e29b31;
+    }
+
+    .leaf-three {
+      left: 58%;
+      animation-delay: 3s;
+      background-color: #9d4825;
+    }
+
+    .leaf-four {
+      left: 70%;
+      animation-delay: 0.8s;
+      background-color: #d2691e;
+    }
+
+    @keyframes leafFall {
+      0% {
+        transform: translateY(-12px) translateX(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(28px) translateX(18px) rotate(130deg);
+      }
+
+      100% {
+        transform: translateY(72px) translateX(-12px) rotate(260deg);
+      }
+    }
+
+    /* Drink selector */
+    .coffee-option-input {
+      display: none;
+    }
+
+    .coffee-option-label {
+      cursor: pointer;
+    }
+
+    .coffee-slide {
+      display: none !important;
+    }
+
+    #latte:checked ~ .latte-slide,
+    #coldbrew:checked ~ .coldbrew-slide,
+    #mocha:checked ~ .mocha-slide,
+    #cappuccino:checked ~ .cappuccino-slide,
+    #macchiato:checked ~ .macchiato-slide,
+    #chai:checked ~ .chai-slide {
+      display: block !important;
+    }
+
+    /* Responsive layout */
+    @media screen and (max-width: 600px) {
+      .mobile {
+        width: 100% !important;
+      }
+
+      .block {
+        display: block !important;
+        width: 100% !important;
+      }
+
+      .mobile-padding {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+      }
+
+      .mobile-heading {
+        font-size: 25px !important;
+        line-height: 1.25 !important;
+      }
+
+      .mobile-copy {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+      }
+
+      .mobile-button {
+        display: block !important;
+        margin: 0 auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#eeeeee; font-family:Arial, Helvetica, sans-serif;">
+
+  <!-- Outer fluid container -->
+  <table
+    role="presentation"
+    width="100%"
+    cellspacing="0"
+    cellpadding="0"
+    border="0"
+    style="width:100%; background-color:#eeeeee;"
+  >
+    <tr>
+      <td align="center" style="padding:20px 0;">
+
+        <!-- Main email container -->
+        <table
+          role="presentation"
+          class="mobile"
+          width="600"
+          cellspacing="0"
+          cellpadding="0"
+          border="0"
+          style="width:600px; max-width:600px; background-color:#ffffff;"
+        >
+
+          <!-- Logo and falling leaves -->
+          <tr>
+            <td
+              align="center"
+              style="padding:30px 20px 10px 20px; background-color:#ffffff; position:relative; overflow:hidden;"
+            >
+              <img
+                src="https://placehold.co/120x120/6f4e37/ffffff?text=CAFE%0ACOFFEE"
+                width="120"
+                alt="Cafe Coffee logo"
+                style="display:block; width:120px; max-width:100%; height:auto; border-radius:50%;"
+              >
+
+              <div
+                class="animated-steam"
+                style="margin-top:10px; color:#d2691e; font-size:20px; line-height:1;"
+              >
+                ~ &nbsp; ~ &nbsp; ~
+              </div>
+
+              <div class="leaf-canvas" aria-hidden="true">
+                <span class="leaf leaf-one"></span>
+                <span class="leaf leaf-two"></span>
+                <span class="leaf leaf-three"></span>
+                <span class="leaf leaf-four"></span>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Headline -->
+          <tr>
+            <td
+              align="center"
+              class="mobile-padding"
+              style="padding:10px 25px 25px 25px; text-align:center; background-color:#ffffff;"
+            >
+              <h1
+                class="mobile-heading"
+                style="margin:0 0 15px 0; color:#6f4e37; font-size:30px; line-height:1.3;"
+              >
+                NEW DRINK ALERT!
+              </h1>
+
+              <h2
+                style="margin:0; color:#333333; font-size:22px; line-height:1.4; font-weight:normal;"
+              >
+                <strong><em>Fall</em></strong> in love with our new Pumpkin Spice Latte
+              </h2>
+            </td>
+          </tr>
+
+          <!-- Hero image -->
+          <tr>
+            <td style="padding:0;">
+              <img
+                src="images/coffee.jpeg"
+                width="600"
+                alt="A freshly brewed pumpkin spice latte from Cafe Coffee"
+                style="display:block; width:100%; max-width:100%; height:auto; border:0;"
+              >
+            </td>
+          </tr>
+
+          <!-- Body copy -->
+          <tr>
+            <td
+              class="mobile-padding mobile-copy"
+              style="padding:30px 25px 10px 25px; color:#333333; font-size:16px; line-height:1.6; text-align:left;"
+            >
+              <p style="margin:0 0 15px 0; text-align:center;">
+                Start your day with a delicious pumpkin spice latte from Cafe Coffee.
+                Our drinks are made with freshly brewed coffee and organic milk.
+              </p>
+
+              <p style="margin:0 0 15px 0;">
+                Use the coupon code <strong>COFFEE10</strong> to receive 10% off your order this week!
+              </p>
+            </td>
+          </tr>
+
+          <!-- Two-column section -->
+          <tr>
+            <td
+              class="mobile-padding"
+              style="padding:25px; background-color:#fff8f0;"
+            >
+              <table
+                role="presentation"
+                width="100%"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                style="width:100%;"
+              >
+                <tr>
+                  <td
+                    class="block"
+                    width="48%"
+                    valign="top"
+                    align="left"
+                    style="width:48%; padding-right:10px;"
+                  >
+                    <img
+                      src="images/freshly-brewed.jpg"
+                      width="260"
+                      height="180"
+                      alt="Freshly brewed coffee"
+                      style="width:100%; max-width:260px; height:180px; object-fit:cover; object-position:25%; border-radius:8px;"
+                    >
+                  </td>
+
+                  <td
+                    class="block"
+                    width="48%"
+                    valign="middle"
+                    align="center"
+                    style="width:48%; padding:5px 0 5px 10px; color:#333333;"
+                  >
+                    <h2
+                      class="mobile-heading"
+                      style="margin:0 0 10px 0; color:#6f4e37; font-size:23px; line-height:1.25;"
+                    >
+                      Made for cozy mornings
+                    </h2>
+
+                    <p
+                      class="mobile-copy"
+                      style="margin:0; font-size:15px; line-height:1.5; text-align:center;"
+                    >
+                      Warm spices, smooth espresso, and creamy milk make every sip feel like a fall morning.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Three-column section -->
+          <tr>
+            <td
+              class="mobile-padding"
+              style="padding:30px 20px; background-color:#ffffff; text-align:center;"
+            >
+              <h2
+                class="mobile-heading"
+                style="margin:0 0 18px 0; color:#6f4e37; font-size:25px;"
+              >
+                Best time for coffee? Anytime!
+              </h2>
+
+              <table
+                role="presentation"
+                width="100%"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                style="width:100%;"
+              >
+                <tr>
+
+                  <td
+                    class="block"
+                    width="31%"
+                    valign="top"
+                    style="width:31%; padding:8px; background-color:#fff8f0;"
+                  >
+                    <img
+                      src="images/morning-coffee.jpg"
+                      width="150"
+                      alt="Morning coffee"
+                      style="width:100%; max-width:150px; height:150px; object-fit:cover; margin:0 auto 8px auto;"                    >
+
+                    <strong style="color:#6f4e37; font-size:16px;">
+                      Morning
+                    </strong>
+
+                    <br>
+
+                    <span style="color:#333333; font-size:13px; line-height:1.4;">
+                      Start the day off right 
+                    </span>
+                  </td>
+
+                  <td
+                    class="block"
+                    width="31%"
+                    valign="top"
+                    style="width:31%; padding:8px; background-color:#fff8f0;"
+                  >
+                    <img
+                      src="images/afternoon-coffee.jpg"
+                      width="150"
+                      alt="Afternoon coffee"
+                      style="width:100%; max-width:150px; height:150px; object-fit:cover; object-position:center 75%; margin:0 auto 8px auto;"                    >
+
+                    <strong style="color:#6f4e37; font-size:16px;">
+                      Afternoon
+                    </strong>
+
+                    <br>
+
+                    <span style="color:#333333; font-size:13px; line-height:1.4;">
+                      Take a well-deserved break
+                    </span>
+                  </td>
+
+                  <td
+                    class="block"
+                    width="31%"
+                    valign="top"
+                    style="width:31%; padding:8px; background-color:#fff8f0;"
+                  >
+                    <img
+                      src="images/evening-coffee.jpg"
+                      width="150"
+                      alt="Evening coffee"
+                      style="width:100%; max-width:150px; height:150px; object-fit:cover; margin:0 auto 8px auto;"                    >
+
+                    <strong style="color:#6f4e37; font-size:16px;">
+                      Evening
+                    </strong>
+
+                    <br>
+
+                    <span style="color:#333333; font-size:13px; line-height:1.4;">
+                      A little treat before bed
+                    </span>
+                  </td>
+
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Interactive drink selector -->
+          <tr>
+            <td
+              class="mobile-padding"
+              style="padding:28px 25px; background-color:#f4eee8; text-align:center;"
+            >
+              <h2
+                class="mobile-heading"
+                style="margin:0 0 8px 0; color:#6f4e37; font-size:24px;"
+              >
+                Pick your perfect order
+              </h2>
+
+              <p
+                class="mobile-copy"
+                style="margin:0 0 16px 0; color:#333333; font-size:15px; line-height:1.5;"
+              >
+                Select a drink to see its flavor profile.
+              </p>
+
+              <!-- Hidden radio buttons -->
+              <input
+                class="coffee-option-input"
+                type="radio"
+                name="coffee-choice"
+                id="latte"
+                checked
+              >
+
+              <input
+                class="coffee-option-input"
+                type="radio"
+                name="coffee-choice"
+                id="coldbrew"
+              >
+
+              <input
+                class="coffee-option-input"
+                type="radio"
+                name="coffee-choice"
+                id="mocha"
+              >
+
+              <input
+                class="coffee-option-input"
+                type="radio"
+                name="coffee-choice"
+                id="cappuccino"
+              >
+
+              <input
+                class="coffee-option-input"
+                type="radio"
+                name="coffee-choice"
+                id="macchiato"
+              >
+
+              <!-- Clickable labels -->
+              <label
+                class="coffee-option-label"
+                for="latte"
+                style="display:inline-block; margin:3px; padding:9px 12px; border:1px solid #6f4e37; border-radius:4px; color:#6f4e37; font-size:13px;"
+              >
+                Pumpkin Latte
+              </label>
+
+              <label
+                class="coffee-option-label"
+                for="coldbrew"
+                style="display:inline-block; margin:3px; padding:9px 12px; border:1px solid #6f4e37; border-radius:4px; color:#6f4e37; font-size:13px;"
+              >
+                Cold Brew
+              </label>
+
+              <label
+                class="coffee-option-label"
+                for="mocha"
+                style="display:inline-block; margin:3px; padding:9px 12px; border:1px solid #6f4e37; border-radius:4px; color:#6f4e37; font-size:13px;"
+              >
+                Mocha
+              </label>
+
+              <label
+                class="coffee-option-label"
+                for="cappuccino"
+                style="display:inline-block; margin:3px; padding:9px 12px; border:1px solid #6f4e37; border-radius:4px; color:#6f4e37; font-size:13px;"
+              >
+                Cappuccino
+              </label>
+
+              <label
+                class="coffee-option-label"
+                for="macchiato"
+                style="display:inline-block; margin:3px; padding:9px 12px; border:1px solid #6f4e37; border-radius:4px; color:#6f4e37; font-size:13px;"
+              >
+                Macchiato
+              </label>
+
+
+              <!-- Drink profiles -->
+              <div
+                class="coffee-slide latte-slide"
+                style="display:none; margin-top:18px; padding:15px; background-color:#ffffff; color:#333333; font-size:14px; line-height:1.5;"
+              >
+                Pumpkin Spice Latte: espresso, pumpkin spice, and steamed milk.
+              </div>
+
+              <div
+                class="coffee-slide coldbrew-slide"
+                style="display:none; margin-top:18px; padding:15px; background-color:#ffffff; color:#333333; font-size:14px; line-height:1.5;"
+              >
+                Cold Brew: smooth, chilled coffee.
+              </div>
+
+              <div
+                class="coffee-slide mocha-slide"
+                style="display:none; margin-top:18px; padding:15px; background-color:#ffffff; color:#333333; font-size:14px; line-height:1.5;"
+              >
+                Mocha: rich chocolate, espresso, and milk.
+              </div>
+
+              <div
+                class="coffee-slide cappuccino-slide"
+                style="display:none; margin-top:18px; padding:15px; background-color:#ffffff; color:#333333; font-size:14px; line-height:1.5;"
+              >
+                Cappuccino: bold espresso, and foamy milk.
+              </div>
+
+              <div
+                class="coffee-slide macchiato-slide"
+                style="display:none; margin-top:18px; padding:15px; background-color:#ffffff; color:#333333; font-size:14px; line-height:1.5;"
+              >
+                Macchiato: concentrated espresso topped with a small amount of creamy milk foam.
+              </div>
+
+              
+            </td>
+          </tr>
+
+          <!-- Background image section -->
+          <tr>
+            <td
+              background="images/coffee-background.jpg"
+              bgcolor="#ffffff"
+              style="background-image:linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.25)),url('images/coffee-background.jpg'); background-size:cover; background-position:center; padding:55px 25px; text-align:center; color:#000000;"
+            >
+              <h2 style="margin:0 0 15px 0; color:#000000; font-size:25px;">
+                The Perfect Cup Is Waiting
+              </h2>
+
+              <p style="margin:0; color:#000000; font-size:16px; line-height:1.6;">
+                Treat yourself to something delicious today.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Interactive button -->
+          <tr>
+            <td
+              align="center"
+              style="padding:35px 20px; text-align:center; background-color:#ffffff;"
+            >
+              <a
+                class="button mobile-button"
+                href="https://www.starbucks.com/menu"
+                aria-label="View the coffee menu"
+                style="display:inline-block; padding:15px 25px; background-color:#6f4e37; border:2px solid #6f4e37; border-radius:5px; color:#ffffff; font-size:16px; line-height:1.2; text-decoration:none;"
+              >
+                View the Coffee Menu
+              </a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td
+              class="mobile-padding"
+              style="padding:25px; background-color:#ffffff; color:#999999; font-size:14px; line-height:1.5; text-align:left;"
+            >
+              <p style="margin:0 0 15px 0;">
+                Feel free to
+                <a
+                  class="text-link"
+                  href="mailto:youremail@example.com?subject=Unsubscribe"
+                  aria-label="Unsubscribe from future emails"
+                  style="color:#6f4e37; text-decoration:underline;"
+                >
+                  unsubscribe from future emails
+                </a>.
+              </p>
+
+              <p style="margin:0;">
+                Cafe Coffee<br>
+                123 Main Street<br>
+                Northridge, CA 91325
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
