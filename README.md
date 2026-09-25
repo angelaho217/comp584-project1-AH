@@ -1,3 +1,2 @@
-# HW3 Applying Responsiveness and Table Based Design to Email with HTML and CSS
-
-https://angelaho217.github.io/comp584-hw3-AH/
+# Project 1 Email Campaign
+https://angelaho217.github.io/comp584-project1-AH/
